@@ -256,13 +256,76 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
   .scene-card .sc-name{font-size:10px}
   .char-grid{grid-template-columns:repeat(auto-fill,minmax(108px,1fr))}
 }
+
+.lore-header{text-align:center;padding:20px 12px 10px;border-bottom:1px solid rgba(212,168,67,0.08);flex-shrink:0}
+.lore-header h1{font-size:22px;font-weight:700;letter-spacing:8px;background:linear-gradient(135deg,#f0e6d3,#d4a843,#f0e6d3);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.lore-header .sub{font-size:11px;color:#5a4a3a;letter-spacing:4px;margin-top:2px}
+.lore-tabs{display:flex;flex-shrink:0;background:rgba(15,8,3,0.9);border-bottom:1px solid rgba(212,168,67,0.06)}
+.lore-tabs button{flex:1;padding:10px 0;font-size:13px;font-weight:600;letter-spacing:2px;color:#4a3a2a;background:none;border:none;border-bottom:2px solid transparent;cursor:pointer;transition:.2s;font-family:inherit}
+.lore-tabs button:hover{color:#7a6a5a}
+.lore-tabs button.active{color:#d4a843;border-bottom-color:#d4a843}
+.lore-content{flex:1;overflow-y:auto;padding:12px 14px 90px}
+.lore-content .ltab{display:none}
+.lore-content .ltab.active{display:block;animation:fadeInUp .35s}
+.narrative .scroll-text{font-size:14px;line-height:2.2;color:#b8a898;padding:8px 0;white-space:pre-line}
+.narrative .scroll-text em{font-style:normal;color:#d4a843}
+.narrative .scroll-text .section-title{display:block;font-size:16px;font-weight:700;color:#f0e6d3;letter-spacing:3px;margin:18px 0 8px;padding-bottom:6px;border-bottom:1px solid rgba(212,168,67,0.08);text-align:center}
+.narrative .scroll-text .opening-quote{display:block;text-align:center;font-size:16px;color:#d4a843;font-style:italic;letter-spacing:2px;padding:20px 0;line-height:1.8}
+.compendium .faction-group{margin-bottom:12px}
+.compendium .fg-title{font-size:15px;font-weight:700;color:#d4a843;letter-spacing:2px;padding:8px 0 6px;border-bottom:1px solid rgba(212,168,67,0.08);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.char-entry{background:linear-gradient(145deg,rgba(25,12,4,0.95),rgba(18,8,2,0.98));border:1px solid rgba(212,168,67,0.06);border-radius:10px;margin-bottom:6px;overflow:hidden;transition:.2s;cursor:pointer}
+.char-entry:hover{border-color:rgba(212,168,67,0.15)}
+.char-entry .ce-head{display:flex;align-items:center;gap:10px;padding:10px 12px}
+.char-entry .ce-head .ce-av{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;border:2px solid rgba(212,168,67,0.2);background:rgba(18,8,2,0.5)}
+.char-entry .ce-head .ce-av.lgd{border-color:#d4a843}
+.char-entry .ce-head .ce-av.rare{border-color:#6b4fa8}
+.char-entry .ce-head .ce-info{flex:1}
+.char-entry .ce-head .ce-info .cen{font-size:14px;font-weight:700}
+.char-entry .ce-head .ce-info .cet{font-size:10px;color:#4a3a2a}
+.char-entry .ce-head .ce-rarity{font-size:10px;padding:1px 6px;border-radius:6px}
+.char-entry .ce-head .ce-rarity.lgd{background:rgba(212,168,67,0.12);color:#d4a843;border:1px solid rgba(212,168,67,0.2)}
+.char-entry .ce-head .ce-rarity.rare{background:rgba(107,79,168,0.12);color:#b898e8;border:1px solid rgba(107,79,168,0.2)}
+.char-entry .ce-head .ce-rarity.cmn{background:rgba(90,122,90,0.12);color:#8aba8a;border:1px solid rgba(90,122,90,0.15)}
+.char-entry .ce-body{display:none;padding:0 12px 10px;border-top:1px solid rgba(212,168,67,0.04)}
+.char-entry .ce-body.open{display:block;animation:fadeInUp .25s}
+.char-entry .ce-body .ce-field{margin-top:6px}
+.char-entry .ce-body .ce-field .cef-label{font-size:10px;color:#4a3a2a;letter-spacing:1px;margin-bottom:2px}
+.char-entry .ce-body .ce-field .cef-val{font-size:12px;color:#b8a898;line-height:1.6}
+.back-to-lore{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);z-index:50;padding:8px 24px;border:1px solid rgba(212,168,67,0.25);border-radius:8px;background:linear-gradient(135deg,rgba(180,50,30,0.25),rgba(139,0,0,0.35));color:#f0e6d3;font-size:14px;font-weight:700;letter-spacing:3px;cursor:pointer;transition:.3s;font-family:inherit;max-width:300px;width:90%}
+.back-to-lore:hover{background:linear-gradient(135deg,rgba(180,50,30,0.4),rgba(139,0,0,0.5));box-shadow:0 0 15px rgba(212,168,67,0.12)}
+.enter-game{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);z-index:50;padding:10px 28px;border:1px solid rgba(212,168,67,0.3);border-radius:10px;background:linear-gradient(135deg,rgba(180,50,30,0.3),rgba(139,0,0,0.4));color:#f0e6d3;font-size:16px;font-weight:700;letter-spacing:4px;cursor:pointer;transition:.3s;font-family:inherit;max-width:300px;width:90%}
+.enter-game:hover{background:linear-gradient(135deg,rgba(180,50,30,0.5),rgba(139,0,0,0.6));box-shadow:0 0 25px rgba(212,168,67,0.15)}
+.gh-back{display:inline-block;padding:3px 10px;border:1px solid rgba(212,168,67,0.15);border-radius:4px;color:#5a4a3a;font-size:11px;cursor:pointer;transition:.15s;background:none;font-family:inherit}
+.gh-back:hover{color:#d4a843;border-color:rgba(212,168,67,0.3)}
+.screen{display:none;position:relative;z-index:1;max-width:480px;margin:0 auto;min-height:100vh}
+.screen.active{display:flex;flex-direction:column}
 </style>
 </head>
 <body>
 
-<div class="app">
-  <div class="header">
+
+<!-- SCREEN 1: 江湖图鉴 -->
+<div class="screen active" id="screenLore">
+  <div class="lore-header">
     <h1>笑傲江湖</h1>
+    <div class="sub">— 江 湖 图 鉴 —</div>
+  </div>
+  <div class="lore-tabs">
+    <button class="active" data-ltab="narrative">江湖叙</button>
+    <button data-ltab="compendium">人物谱</button>
+  </div>
+  <div class="lore-content">
+    <div class="ltab active" id="ltab-narrative"><div class="narrative"><div class="scroll-text" id="narrativeText"></div></div></div>
+    <div class="ltab" id="ltab-compendium"><div class="compendium" id="compendiumContent"></div></div>
+  </div>
+  <button class="enter-game" onclick="switchScreen('game')">✦ 进 入 江 湖 ✦</button>
+</div>
+
+<!-- SCREEN 2: 江湖探索 -->
+<div class="screen" id="screenGame">
+
+  <div class="header">
+    <div style="display:flex;align-items:center;gap:6px;justify-content:center"><span class="gh-back" onclick="switchScreen('lore')">← 图鉴</span><h1>笑傲江湖</h1></div>
     <div class="sub">— 剧 情 探 索 · 碎 片 合 成 —</div>
     <div class="stats">
       <span>碎片 <em id="statFrags">0</em></span>
@@ -324,8 +387,9 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
     </div>
     <button class="eo-dismiss" id="eoDismiss">确 定</button>
   </div>
-</div>
 
+  <button class="back-to-lore" onclick="switchScreen('lore')">← 返回图鉴</button>
+</div>
 <!-- Multi-result overlay (10-draw) -->
 <div class="multi-overlay" id="multiOverlay">
   <div class="mo-box">
@@ -514,7 +578,70 @@ const STORY_SCENES = [
 const CHARACTERS = [
   {id:'lhc',name:'令狐冲',faction:'华山派',rarity:'legendary',title:'华山大师兄',emoji:'⚔️',
    skill:'独孤九剑',skillDesc:'「无招胜有招，一剑破万法」风清扬所传绝学，以无招破有招。',
-   desc:'生性洒脱不羁，嗜酒如命，天资绝世。一曲《笑傲江湖》道尽江湖恩怨。他与东方不败之间一段跨越正邪的深情，成为心中永远的痛。'},
+    background:'华山派大弟子，自幼被岳不群夫妇收养。生性洒脱不羁，嗜酒如命，天资绝世。在思过崖得风清扬传授独孤九剑。',
+   goal:'笑傲江湖，逍遥自在。不为名利所困。',
+   relations:'岳不群(师父→反目) · 任盈盈(恋人) · 东方不败(纠葛) · 风清扬(授业) · 岳灵珊(师妹/情断)',
+   background:'华山派掌门，人称君子剑。表面谦和，实则城府极深。为获辟邪剑谱不惜牺牲一切。',
+   goal:'统一五岳剑派，成为武林至尊。',
+   relations:'令狐冲(利用) · 宁中则(夫妻) · 岳灵珊(父女) · 林平之(觊觎剑谱) · 左冷禅(对手)',
+   background:'日月神教教主，练成葵花宝典后武功天下第一。本是男儿身因练功而性情大变。遇到令狐冲后第一次体会爱的滋味。',
+   goal:'守护令狐冲，哪怕他心中另有他人。最终为救他而死。',
+   relations:'令狐冲(深爱) · 任我行(敌对) · 任盈盈(情敌)',
+   background:'日月神教圣姑，任我行独女。精通音律。在绿竹巷与令狐冲以琴结缘。为爱情舍弃圣姑之位。',
+   goal:'与令狐冲长相厮守，笑傲江湖。',
+   relations:'令狐冲(恋人) · 任我行(父亲) · 东方不败(情敌)',
+   background:'岳不群之妻，令狐冲师母。性情刚烈正直。对令狐冲视如己出。',
+   goal:'守护华山派，最终以死明志。',
+   relations:'岳不群(夫妻) · 令狐冲(慈爱) · 岳灵珊(母女)',
+   background:'华山派小师妹。天真烂漫。与令狐冲青梅竹马，后因林平之移情别恋。',
+   goal:'与心爱之人长相厮守。',
+   relations:'令狐冲(青梅竹马) · 林平之(恋人→背弃)',
+   background:'华山派前辈，独孤求败传人。隐居思过崖。将独孤九剑传授给令狐冲。',
+   goal:'将独孤九剑传承给有缘人。',
+   relations:'令狐冲(传人)',
+   background:'华山派二师兄，左冷禅安插的内应。表面忠厚暗中传递情报。',
+   goal:'完成左冷禅交代的任务。',
+   relations:'左冷禅(主子) · 岳不群(背叛)',
+   background:'福威镖局少镖头，因辟邪剑谱遭灭门。拜入华山后一心复仇，为练剑法不惜自宫。',
+   goal:'为林家报仇雪恨。',
+   relations:'岳不群(被利用) · 岳灵珊(利用) · 令狐冲(敌视)',
+   background:'日月神教前任教主。被东方不败囚禁西湖底十二年。重掌教务后霸气不减。',
+   goal:'重振日月神教，向东方不败复仇。',
+   relations:'东方不败(仇敌) · 任盈盈(女儿) · 向问天(忠臣)',
+   background:'日月神教光明左使，任我行结拜兄弟。重情重义。与令狐冲一见如故。',
+   goal:'辅佐任我行重振日月神教。',
+   relations:'任我行(结拜) · 令狐冲(知己)',
+   background:'五毒教教主，用毒无双。性情活泼直率。对令狐冲一见倾心。',
+   goal:'守护五毒教，追求心中所爱。',
+   relations:'令狐冲(倾心) · 任盈盈(好友)',
+   background:'恒山派掌门，刚烈正直。五岳风波中誓死不屈，被左冷禅暗算。',
+   goal:'守护恒山派。',
+   relations:'仪琳(徒弟) · 左冷禅(敌对)',
+   background:'恒山派小尼姑，纯洁善良。对令狐冲动了凡心，因身份将深情埋藏。',
+   goal:'虔心向佛，普度众生。',
+   relations:'定逸师太(师父) · 不戒和尚(父亲) · 令狐冲(暗恋)',
+   background:'仪琳生父，不拘小节的花和尚。不戒酒肉武功高强，暗中守护女儿。',
+   goal:'保护女儿仪琳。',
+   relations:'仪琳(女儿) · 令狐冲(信任)',
+   background:'嵩山派掌门，五岳盟主。野心勃勃心狠手辣。',
+   goal:'统一五岳，称霸武林。',
+   relations:'岳不群(对手) · 令狐冲(敌对) · 劳德诺(内应) · 天门道人(暗算)',
+   background:'嵩山派高手，左冷禅心腹。助纣为虐。',
+   goal:'辅佐左冷禅。',
+   relations:'左冷禅(主子) · 刘正风(迫害)',
+   background:'衡山派掌门，琴剑双绝。低调内敛。',
+   goal:'守护衡山派，独善其身。',
+   relations:'刘正风(师弟) · 左冷禅(被迫合作)',
+   background:'衡山派高手，精通音律。与曲洋合创笑傲江湖曲。金盆洗手遭灭门。',
+   goal:'与知音共谱笑傲江湖。',
+   relations:'曲洋(知音) · 左冷禅(迫害者)',
+   background:'泰山派掌门，刚烈耿直。五岳大会上被左冷禅暗算。',
+   goal:'守护泰山派道统。',
+   relations:'左冷禅(暗算)',
+   background:'万里独行采花大盗。与令狐冲不打不相识，被感化出家。',
+   goal:'快意恩仇，后皈依佛门。',
+   relations:'令狐冲(挚友) · 不戒和尚(师父)',
+  desc:'生性洒脱不羁，嗜酒如命，天资绝世。一曲《笑傲江湖》道尽江湖恩怨。他与东方不败之间一段跨越正邪的深情，成为心中永远的痛。'},
   {id:'ybq',name:'岳不群',faction:'华山派',rarity:'rare',title:'华山掌门',emoji:'🎭',
    skill:'紫霞神功',skillDesc:'「君子剑法，正气凛然」华山派镇派内功，练至大成可掌生紫气。',
    desc:'表面谦和正直的君子剑，实则野心暗藏。为达目的不择手段，终堕入魔道。'},
@@ -1136,6 +1263,107 @@ document.addEventListener('keydown',e=>{
 // ===== INIT =====
 initState();
 renderAll();
+
+// ===== SCREEN SWITCHING =====
+function switchScreen(name){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById('screen'+name.charAt(0).toUpperCase()+name.slice(1)).classList.add('active');
+}
+
+// ===== LORE RENDERING =====
+// Wait for DOM
+document.addEventListener('DOMContentLoaded', function(){
+  // Narrative
+  const narrativeText = document.getElementById('narrativeText');
+  if(narrativeText){
+    narrativeText.innerHTML = `
+<div class="opening-quote">"天下风云出我辈，一入江湖岁月催。皇图霸业谈笑中，不胜人生一场醉。"</div>
+
+江湖，从来不是一个平静的地方。
+
+在这片刀光剑影的土地上，正与邪的边界从来模糊不清。有人为名为利，有人为情为义，有人为复仇而活，有人为一曲知音而笑傲天下。
+
+大明年间，五岳剑派与日月神教的恩怨已延续数代。而一部传说中的《辟邪剑谱》，更让整个江湖陷入了前所未有的暗流涌动。
+
+一曲《笑傲江湖》，道尽了恩怨情仇；一柄独孤九剑，斩开了正邪藩篱。这个故事里，有最纯粹的侠义，也有最深沉的背叛；有最炽热的爱恋，也有最悲凉的牺牲。
+
+<div class="section-title">╾ 武 林 格 局 ╼</div>
+
+<strong>【五岳剑派】</strong>
+东岳泰山、西岳华山、南岳衡山、北岳恒山、中岳嵩山——五派同气连枝，却各怀心思。嵩山派左冷禅野心勃勃，一心想吞并其余四派；华山派岳不群表面谦和，暗中觊觎辟邪剑谱；衡山派刘正风因与魔教曲洋相交而遭灭门；恒山派定逸师太宁死不屈；泰山派天门道人刚烈耿直。
+
+<strong>【日月神教】</strong>
+雄踞黑木崖的庞大教派，被正道称为"魔教"。前任教主任我行被东方不败囚禁十二年，东方不败练成葵花宝典后武功天下第一，却因爱上令狐冲而走向毁灭。
+
+<strong>【散人游侠】</strong>
+游离于正邪之外的江湖儿女：万里独行田伯光、五毒教主蓝凤凰、酒肉和尚不戒……他们不受门派束缚，却在关键时刻推动着命运的齿轮。
+
+<div class="section-title">╾ 恩 怨 情 仇 ╼</div>
+
+这场江湖中，最动人也最心碎的不是刀光剑影，而是儿女情长。
+
+东方不败，天下第一高手，却为一个"情"字甘愿赴死。她在瀑布边第一次见到令狐冲，那一瞬间，杀人如麻的魔教教主变成了一个会脸红的女子。
+
+任盈盈，一曲琴音动天下，为了令狐冲放下圣姑之位，甘愿做他身边的一个平凡女子。
+
+仪琳，纯如白莲的小尼姑，将一份不可能的爱恋藏在青灯古佛前。
+
+而令狐冲，这个不羁的浪子，背负着师恩、爱情、友情与背叛，最终选择笑傲江湖，与知音相伴。
+
+<div class="section-title">╾ 江 湖 永 在 ╼</div>
+
+江湖还是那个江湖，只是故事里的人换了一茬又一茬。
+
+有人问，什么是笑傲江湖？是快意恩仇的豪情？是琴箫和鸣的知音？是一剑破万法的绝世武功？还是放下一切、与心爱之人泛舟五湖？
+
+或许，答案就在你心中。
+而这，就是属于2013年《笑傲江湖》的故事。`;
+  }
+
+  // Compendium (lore tab button)
+  initLoreTabs();
+  renderCompendium();
+});
+
+function initLoreTabs(){
+  document.querySelectorAll('.lore-tabs button').forEach(btn=>{
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.lore-tabs button').forEach(b=>b.classList.remove('active'));
+      this.classList.add('active');
+      document.querySelectorAll('.ltab').forEach(t=>t.classList.remove('active'));
+      document.getElementById('ltab-'+this.dataset.ltab).classList.add('active');
+    });
+  });
+}
+
+function renderCompendium(){
+  const container = document.getElementById('compendiumContent');
+  if(!container) return;
+  const factions = ['华山派','日月神教','恒山派','嵩山派','衡山派','泰山派','散人'];
+  let html = '';
+  factions.forEach(faction => {
+    const chars = CHARACTERS.filter(c => c.faction === faction);
+    if(chars.length === 0) return;
+    html += '<div class="faction-group"><div class="fg-title">▸ '+faction+'<span class="fg-count">'+chars.length+'人</span></div>';
+    chars.forEach(c => {
+      const rarityLabel = {legendary:'传说',rare:'稀有',common:'普通'}[c.rarity]||'';
+      html += '<div class="char-entry" onclick="this.querySelector(\'.ce-body\').classList.toggle(\'open\')" data-id="'+c.id+'">'+
+        '<div class="ce-head">'+
+          '<div class="ce-av '+c.rarity+'">'+c.emoji+'</div>'+
+          '<div class="ce-info"><div class="cen">'+c.name+'</div><div class="cet">'+c.title+'</div></div>'+
+          '<div class="ce-rarity '+c.rarity+'">'+rarityLabel+'</div>'+
+        '</div>'+
+        '<div class="ce-body">'+
+          '<div class="ce-field"><div class="cef-label">【背景】</div><div class="cef-val">'+(c.background||'')+'</div></div>'+
+          '<div class="ce-field"><div class="cef-label">【武功】</div><div class="cef-val">「'+c.skill+'」'+c.skillDesc.replace(/「[^」]*」/g,'')+'</div></div>'+
+          '<div class="ce-field"><div class="cef-label">【目的】</div><div class="cef-val">'+(c.goal||'')+'</div></div>'+
+          '<div class="ce-field"><div class="cef-label">【关系】</div><div class="cef-val">'+(c.relations||'')+'</div></div>'+
+        '</div></div>';
+    });
+    html += '</div>';
+  });
+  container.innerHTML = html;
+}
 </script>
 </body>
 </html>
